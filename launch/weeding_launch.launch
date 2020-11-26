@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+    <include file="$(find uol_cmp9767m_base)/launch/thorvald-sim.launch" /> 
+
+    <node name="WeedSprayer" pkg="weeding_assignment" type="WeedSprayer.py"/>
+    <node name="Mover" pkg="weeding_assignment" type="Mover.py"/>
+
+</launch>
