@@ -16,7 +16,7 @@ class RoamerComponent:
         self.obstacleDetectionSub = rospy.Subscriber('/thorvald_001/scan',LaserScan,self.detectObstacle)
         self.sprayActive = False
         self.SprayerPub = rospy.Publisher('/thorvald_001/sprayerStart',Bool,queue_size=0) 
-
+    
 
 
 
@@ -25,6 +25,9 @@ class RoamerComponent:
 
     def detectObstacle(self,msg):
         self.moveRobot()
+    
+
+    
 
 
 
@@ -36,6 +39,9 @@ class RoamerComponent:
         self.RoamerMovePub.publish(t)
        
        # self.SprayerPub.publish(False)
+    
+    
+        
        
     
 

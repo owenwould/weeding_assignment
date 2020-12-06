@@ -10,8 +10,8 @@ class SprayComponent:
     
     def callSprayer(self,msg):
         print("merl")
-        
-        rospy.wait_for_service('/thorvald_001/spray')
+    
+        rospy.wait_for_service(self.serviceName)
         try:
             sprayCall = rospy.ServiceProxy(self.serviceName,Empty)
             respl = sprayCall()
