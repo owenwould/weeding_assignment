@@ -15,7 +15,10 @@ class RoamerComponent:
         self.forwardSpeed = 2.0
         self.obstacleDetectionSub = rospy.Subscriber('/thorvald_001/scan',LaserScan,self.detectObstacle)
         self.sprayActive = False
+        self.canMove = True
         self.SprayerPub = rospy.Publisher('/thorvald_001/sprayerStart',Bool,queue_size=0) 
+        self.WeedLocSub = rospy.Subscriber('/ememem',PoseStamped,self.moveToWeed)
+        self.pubToSimpleMove = rospy.Publisher('/move_base_simple/goal',PoseStamped,queue_size=0)
     
 
 
@@ -25,15 +28,20 @@ class RoamerComponent:
 
     def detectObstacle(self,msg):
         self.moveRobot()
-    
 
-    
-
-
+    def moveToWeed(self,msg):
+        if self.canMove:
+            print("X")
+            msg.pose.orientation.w = 1.0
+            msg.pose.orientation.z = 0
+            msg.pose.orientation.x = 0 
+            msg.pose.orientation.y = 0
+            self.pubToSimpleMove.publish(msg)
+           
 
 
     def moveRobot(self):
-       
+        return
         t = Twist()
         t.linear.x = 0.1
         self.RoamerMovePub.publish(t)

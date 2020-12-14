@@ -1,9 +1,30 @@
 <?xml version="1.0"?>
 <launch>
+    <arg name="map_server" default="true"/>
+    <arg name="obstacles" default="true"/>
+   
 
-    <include file="$(find uol_cmp9767m_base)/launch/thorvald-sim.launch" /> 
 
+   <include file="$(find uol_cmp9767m_tutorial)/launch/amcl.launch"/>
+   <include file="$(find darknet_ros)/launch/darknet_ros.launch"/>  
+   <!--  make sure darknet_ros config ros.yaml points camera to thorvald camera topic -->
+
+
+    <!--
+    <include file="$(find uol_cmp9767m_base)/launch/thorvald-sim.launch"> 
+        <arg name="map_server" default="true"/>
+        <arg name="obstacles" default="true"/>
+    
+    
+    <include/> 
+    -->
+
+
+    <!--<node name="BroadcastTf" pkg="weeding_assignment" type="BroadcastTf.py"/> 
+    <node name="WeedDetector" pkg="weeding_assignment" type="WeedDetector.py"/>-->
     <node name="WeedSprayer" pkg="weeding_assignment" type="WeedSprayer.py"/>
-    <node name="Mover" pkg="weeding_assignment" type="Mover.py"/>
+
+    
+    <!--<node name="Mover" pkg="weeding_assignment" type="Mover.py"/> -->
 
 </launch>

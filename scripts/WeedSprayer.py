@@ -7,6 +7,7 @@ class SprayComponent:
     def __init__(self):
         self.subToSprayCaller = rospy.Subscriber('/thorvald_001/sprayerStart',Bool,self.callSprayer)
         self.serviceName = '/thorvald_001/spray'
+        rospy.loginfo("Spayer Launched")
     
     def callSprayer(self,msg):
         print("merl")
