@@ -2,8 +2,8 @@
 import rospy 
 from sensor_msgs.msg import CameraInfo
 from darknet_ros_msgs.msg import BoundingBoxes,BoundingBox
-from geometry_msgs.msg import PoseStamped
-from nav_msgs.msg import Path
+from geometry_msgs.msg import PoseStamped,PoseWithCovarianceStamped,PoseArray
+from nav_msgs.msg import Path,Odometry
 import image_geometry
 from std_msgs.msg import Bool
 import tf
@@ -42,19 +42,19 @@ class DetectorComponent:
         self.canDetect = False #Default False
         self.depth = 0.5
         self.tfListener = tf.TransformListener()
-        p = Path()
-        self.weedCoordinateArray = p.poses
         rospy.loginfo("WeedDetector Launched")
 
+   
 
     def setCanDetect(self,msg):
         """ start_detecting topic callback Type:Bool, enables custom detector"""
         self.canDetect = msg.data
-    
+
     def setDirection(self,msg):
-        """ robot_moving_down topic callback Type:Bool, sets moving down status"""
         self.movingDown = msg.data
-       
+    
+  
+    
     def detectObjects(self,msg):
         """ 
          darknet_ros/bounding_boxes topic callback Type: Bounding Boxes  
@@ -192,10 +192,11 @@ class DetectorComponent:
         self.camera_info_sub.unregister()
 
 
-
 rospy.init_node('weedDetector')
 detector = DetectorComponent()
 rospy.spin()
+
+
 
 
 
