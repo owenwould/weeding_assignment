@@ -1,9 +1,14 @@
 <?xml version="1.0"?>
 <launch>
+    
 
-    <include file="$(find uol_cmp9767m_base)/launch/thorvald-sim.launch" /> 
-
-    <node name="WeedSprayer" pkg="weeding_assignment" type="WeedSprayer.py"/>
-    <node name="Mover" pkg="weeding_assignment" type="Mover.py"/>
+    <node name="WeedDetector" pkg="weeding_assignment" type="WeedDetector.py" output="screen"/>
+    <node name="WeedSprayer" pkg="weeding_assignment" type="WeedSprayer.py" output="screen"/>
+    <node name="ManageWeeding" pkg="weeding_assignment" type="ManageWeeding.py" output="screen"/>
+    <node name="MoveBaseTopClient" pkg="weeding_assignment" type="MoveBaseTopClient.py" output="screen"/>
+    <node name="MoveBaseClientR" pkg="weeding_assignment" type="MoveBaseClientR.py" output="screen"/>
+    <node name="TopoPlanner" pkg="weeding_assignment" type="TopoPlanner.py" output="screen"/>
+    
+    
 
 </launch>
