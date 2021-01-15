@@ -4,13 +4,12 @@ weeding_assignment package - PERCEPTION SPECIALISM
 - https://github.com/owenwould/weeding_assignment
 - git clone https://github.com/owenwould/weeding_assignment.git
 
-
-- Summary of system 
+Summary of system 
 
 The solution’s chosen focus area is perception, the vision system uses a custom YOLOv3 detector which can quickly and accurately detect weeds and crops. For navigation the solution uses move_base and topological navigation utilising actions. Topological navigation is used to move along a network of nodes which are position at the beginning, middle and end of the cropped rows. Once at a topological node the robot will stop and detect the weeds. The weeds positions are calculated using the PinHole Model from image_geometry and localisation is done using fake localisation. Thorvald will move to these weeds and call the sprayer.
 
 
-- Evaluation Material can be found inside Evaluation folder of package 
+Evaluation Material can be found inside Evaluation folder of package 
 
 Package requires darknet_ros and CMP9767M 
 - get darknet_ros by git clone --recursive https://github.com/leggedrobotics/darknet_ros.git
