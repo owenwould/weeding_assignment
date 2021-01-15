@@ -51,7 +51,7 @@
       y: -0.692909657955
     - x: 0.692909657955
       y: -0.287012577057
-    xy_goal_tolerance: 0.3
+    xy_goal_tolerance: 0.1
     yaw_goal_tolerance: 0.1
 - meta:
     map: test
@@ -106,7 +106,7 @@
       y: -0.692909657955
     - x: 0.692909657955
       y: -0.287012577057
-    xy_goal_tolerance: 0.3
+    xy_goal_tolerance: 0.1
     yaw_goal_tolerance: 0.1
 - meta:
     map: test
@@ -161,7 +161,7 @@
       y: -0.692909657955
     - x: 0.692909657955
       y: -0.287012577057
-    xy_goal_tolerance: 0.3
+    xy_goal_tolerance: 0.1
     yaw_goal_tolerance: 0.1
 - meta:
     map: test
@@ -216,7 +216,7 @@
       y: -0.692909657955
     - x: 0.692909657955
       y: -0.287012577057
-    xy_goal_tolerance: 0.3
+    xy_goal_tolerance: 0.1
     yaw_goal_tolerance: 0.1
 - meta:
     map: test
@@ -271,7 +271,7 @@
       y: -0.692909657955
     - x: 0.692909657955
       y: -0.287012577057
-    xy_goal_tolerance: 0.3
+    xy_goal_tolerance: 0.1
     yaw_goal_tolerance: 0.1
 - meta:
     map: test
@@ -326,7 +326,7 @@
       y: -0.692909657955
     - x: 0.692909657955
       y: -0.287012577057
-    xy_goal_tolerance: 0.3
+    xy_goal_tolerance: 0.1
     yaw_goal_tolerance: 0.1
 - meta:
     map: test
@@ -374,7 +374,7 @@
       y: -0.692909657955
     - x: 0.692909657955
       y: -0.287012577057
-    xy_goal_tolerance: 0.3
+    xy_goal_tolerance: 0.1
     yaw_goal_tolerance: 0.1
 - meta:
     map: test
@@ -429,7 +429,7 @@
       y: -0.692909657955
     - x: 0.692909657955
       y: -0.287012577057
-    xy_goal_tolerance: 0.3
+    xy_goal_tolerance: 0.1
     yaw_goal_tolerance: 0.1
 - meta:
     map: test
@@ -484,7 +484,7 @@
       y: -0.692909657955
     - x: 0.692909657955
       y: -0.287012577057
-    xy_goal_tolerance: 0.3
+    xy_goal_tolerance: 0.1
     yaw_goal_tolerance: 0.1
 - meta:
     map: test
@@ -539,7 +539,7 @@
       y: -0.692909657955
     - x: 0.692909657955
       y: -0.287012577057
-    xy_goal_tolerance: 0.3
+    xy_goal_tolerance: 0.1
     yaw_goal_tolerance: 0.1
 - meta:
     map: test
@@ -594,7 +594,7 @@
       y: -0.692909657955
     - x: 0.692909657955
       y: -0.287012577057
-    xy_goal_tolerance: 0.3
+    xy_goal_tolerance: 0.1
     yaw_goal_tolerance: 0.1
 - meta:
     map: test
@@ -649,7 +649,7 @@
       y: -0.692909657955
     - x: 0.692909657955
       y: -0.287012577057
-    xy_goal_tolerance: 0.3
+    xy_goal_tolerance: 0.1
     yaw_goal_tolerance: 0.1
 - meta:
     map: test
@@ -704,7 +704,7 @@
       y: -0.692909657955
     - x: 0.692909657955
       y: -0.287012577057
-    xy_goal_tolerance: 0.3
+    xy_goal_tolerance: 0.1
     yaw_goal_tolerance: 0.1
 - meta:
     map: test
@@ -759,7 +759,7 @@
       y: -0.692909657955
     - x: 0.692909657955
       y: -0.287012577057
-    xy_goal_tolerance: 0.3
+    xy_goal_tolerance: 0.1
     yaw_goal_tolerance: 0.1
 - meta:
     map: test
@@ -807,5 +807,5 @@
       y: -0.692909657955
     - x: 0.692909657955
       y: -0.287012577057
-    xy_goal_tolerance: 0.3
+    xy_goal_tolerance: 0.1
     yaw_goal_tolerance: 0.1
