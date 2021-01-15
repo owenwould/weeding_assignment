@@ -4,7 +4,13 @@ weeding_assignment package - PERCEPTION SPECIALISM
 - https://github.com/owenwould/weeding_assignment
 - git clone https://github.com/owenwould/weeding_assignment.git
 
--Evaluation Material can be found inside Evaluation folder of package #Important
+
+- Summary of system 
+
+The solution’s chosen focus area is perception, the vision system uses a custom YOLOv3 detector which can quickly and accurately detect weeds and crops. For navigation the solution uses move_base and topological navigation utilising actions. Topological navigation is used to move along a network of nodes which are position at the beginning, middle and end of the cropped rows. Once at a topological node the robot will stop and detect the weeds. The weeds positions are calculated using the PinHole Model from image_geometry and localisation is done using fake localisation. Thorvald will move to these weeds and call the sprayer.
+
+
+- Evaluation Material can be found inside Evaluation folder of package 
 
 Package requires darknet_ros and CMP9767M 
 - get darknet_ros by git clone --recursive https://github.com/leggedrobotics/darknet_ros.git
@@ -14,7 +20,7 @@ Following Steps to set up Project for use split into 3 sections:
 - First section setting up YOLOv3 
 - Second section setting up topological map 
 - Third section setting move_base config files 
-Final section running project
+- Final section running project
 
 #First Section 
 - After cloning darknet_ros into src folder of catkin workspace
@@ -53,7 +59,6 @@ Final section running project
 - view map by running rviz -d $(rospack find uol_cmp9767m_tutorial)/config/topo_nav.rviz
 
 
-
 #Third Step 
 - once install CMP9767M
 - Replace planners.yaml inside CMP9767M/uol_cmp9767m_tutorial/config with planners.yaml from config inside weeding assignment package
@@ -67,7 +72,8 @@ Final section running project
 - run roslaunch darknet_ros darknet_ros.launch 
 - Once darknet has loaded image 
 - Finally run roslaunch weeding_assignment weeding_launch.launch and the weeding will begin 
-
+- if any edges are single direction or a node is missing then reinsert map, if simulation is shut down whilst topological nav is running 
+this can happen
 
 
 

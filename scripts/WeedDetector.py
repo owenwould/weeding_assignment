@@ -2,7 +2,7 @@
 import rospy 
 from sensor_msgs.msg import CameraInfo
 from darknet_ros_msgs.msg import BoundingBoxes,BoundingBox
-from geometry_msgs.msg import PoseStamped,PoseWithCovarianceStamped,PoseArray
+from geometry_msgs.msg import PoseStamped
 from nav_msgs.msg import Path,Odometry
 import image_geometry
 from std_msgs.msg import Bool
@@ -51,6 +51,7 @@ class DetectorComponent:
         self.canDetect = msg.data
 
     def setDirection(self,msg):
+        """ robot_moving_down topic callback Type:Bool, sets moving down status"""
         self.movingDown = msg.data
     
   
