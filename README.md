@@ -12,6 +12,7 @@ The solution’s chosen focus area is perception, the vision system uses a custo
 Evaluation Material can be found inside Evaluation folder of package 
 
 Package requires darknet_ros and CMP9767M 
+- Ubuntu 18.04, ROS Melodic, Python 2
 - get darknet_ros by git clone --recursive https://github.com/leggedrobotics/darknet_ros.git
 - get CMP9767M by git clone https://github.com/LCAS/CMP9767M.git
 
